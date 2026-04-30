@@ -1,0 +1,166 @@
+/* Projects.css – Dark Glassmorphism Style (Tech Badge Fix) */
+
+:root {
+  --projects-bg-start: #0f172a;
+  --projects-bg-end: #1e293b;
+  --projects-accent: #38bdf8;
+  --projects-text: #e2e8f0;
+  --projects-heading: #f8fafc;
+  --projects-card-bg: rgba(255, 255, 255, 0.04);
+  --projects-card-border: rgba(255, 255, 255, 0.08);
+  --projects-card-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  --projects-glow: 0 0 20px rgba(56, 189, 248, 0.15);
+}
+
+/* Section base */
+.projects-section {
+  position: relative;
+  background: linear-gradient(135deg, var(--projects-bg-start), var(--projects-bg-end));
+  color: var(--projects-text);
+  padding: 80px 0;
+  overflow: hidden;
+}
+
+/* Background decorative glow */
+.projects-section::before {
+  content: '';
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(56, 189, 248, 0.08) 0%, transparent 70%);
+  bottom: -150px;
+  left: -150px;
+  z-index: 0;
+}
+
+.projects-section .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Section title */
+.projects-section h2 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: var(--projects-heading);
+  text-align: center;
+  margin-bottom: 3rem;
+  position: relative;
+  letter-spacing: 1px;
+  text-shadow: 0 0 20px rgba(56, 189, 248, 0.3);
+}
+.projects-section h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70px;
+  height: 3px;
+  background: var(--projects-accent);
+  border-radius: 2px;
+}
+
+/* Cards */
+.projects-section .card {
+  background: var(--projects-card-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--projects-card-border);
+  border-radius: 16px;
+  color: var(--projects-text);
+  box-shadow: var(--projects-card-shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  overflow: hidden;
+  height: 100%;
+}
+.projects-section .card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--projects-glow), 0 15px 35px rgba(0, 0, 0, 0.5);
+  border-color: rgba(56, 189, 248, 0.3);
+}
+
+/* Card image */
+.projects-section .card-img-top {
+  height: 180px;
+  object-fit: cover;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Card body */
+.projects-section .card-body {
+  padding: 1.5rem;
+}
+.projects-section .card-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--projects-heading);
+  margin-bottom: 0.8rem;
+}
+.projects-section .card-text {
+  color: #cbd5e1;
+  line-height: 1.6;
+  font-size: 0.95rem;
+  margin-bottom: 1.2rem;
+}
+
+/* Tech badges – FIXED for visibility */
+.projects-section .badge {
+  font-weight: 500;
+  padding: 0.35rem 0.9rem;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  background: rgba(56, 189, 248, 0.2);      /* more opaque */
+  color: #f8fafc;                            /* white text */
+  border: 1px solid rgba(56, 189, 248, 0.4);
+  transition: all 0.25s ease;
+}
+.projects-section .badge:hover {
+  background: var(--projects-accent);
+  color: #0f172a;                            /* dark text on solid hover */
+  transform: translateY(-1px);
+}
+
+/* Buttons */
+.projects-section .btn-primary,
+.projects-section .btn-outline-primary {
+  padding: 0.5rem 1.5rem;
+  border-radius: 50px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  font-size: 0.85rem;
+  transition: all 0.3s ease;
+  border: none;
+}
+.projects-section .btn-primary {
+  background: var(--projects-accent);
+  color: #0f172a;
+  box-shadow: 0 4px 15px rgba(56, 189, 248, 0.3);
+}
+.projects-section .btn-primary:hover {
+  background: #0ea5e9;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(56, 189, 248, 0.5);
+}
+.projects-section .btn-outline-primary {
+  border: 2px solid var(--projects-accent);
+  color: var(--projects-accent);
+  background: transparent;
+}
+.projects-section .btn-outline-primary:hover {
+  background: var(--projects-accent);
+  color: #0f172a;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(56, 189, 248, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .projects-section h2 {
+    font-size: 2.2rem;
+  }
+  .projects-section .card-title {
+    font-size: 1.2rem;
+  }
+}

@@ -1,0 +1,132 @@
+/* Navbar.css */
+
+/* ===== Color Variables ===== */
+:root {
+  --navbar-bg: rgba(15, 23, 42, 0.85);      /* deep slate blue */
+  --navbar-scrolled-bg: rgba(15, 23, 42, 0.95);
+  --navbar-blur: blur(12px);
+  --navbar-text: #f1f5f9;
+  --navbar-hover: #38bdf8;                 /* sky blue accent */
+  --navbar-active: #38bdf8;
+  --brand-color: #ffffff;
+  --toggle-color: #f1f5f9;
+  --shadow-scrolled: 0 4px 20px rgba(0, 0, 0, 0.3);
+  --transition-speed: 0.3s;
+}
+
+/* ===== Navbar Base ===== */
+.navbar-custom {
+  background: var(--navbar-bg);
+  backdrop-filter: var(--navbar-blur);
+  -webkit-backdrop-filter: var(--navbar-blur);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 0.8rem 0;
+  transition: all var(--transition-speed) ease;
+}
+
+.navbar-custom.navbar-scrolled {
+  background: var(--navbar-scrolled-bg);
+  box-shadow: var(--shadow-scrolled);
+  padding: 0.5rem 0;
+}
+
+/* ===== Brand ===== */
+.brand {
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--brand-color) !important;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: color var(--transition-speed) ease;
+}
+.brand:hover {
+  color: var(--navbar-hover) !important;
+}
+
+/* ===== Nav Links ===== */
+.navbar-custom .nav-link {
+  color: var(--navbar-text) !important;
+  font-weight: 500;
+  font-size: 0.95rem;
+  margin: 0 0.5rem;
+  position: relative;
+  padding-bottom: 4px;
+  transition: color var(--transition-speed) ease;
+}
+
+/* Underline effect */
+.navbar-custom .nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: var(--navbar-active);
+  transition: width var(--transition-speed) ease;
+}
+
+.navbar-custom .nav-link:hover {
+  color: var(--navbar-hover) !important;
+}
+.navbar-custom .nav-link:hover::after {
+  width: 100%;
+}
+
+/* Active link styling (react-scroll adds .active) */
+.navbar-custom .nav-link.active {
+  color: var(--navbar-active) !important;
+}
+.navbar-custom .nav-link.active::after {
+  width: 100%;
+}
+
+/* ===== Navbar Toggler (Hamburger) ===== */
+.navbar-custom .navbar-toggler {
+  border: none;
+  padding: 0.25rem 0.5rem;
+}
+.navbar-custom .navbar-toggler:focus {
+  box-shadow: none;
+}
+.navbar-custom .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(241, 245, 249, 0.9)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  transition: transform var(--transition-speed) ease;
+}
+.navbar-custom .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+  transform: rotate(90deg);
+}
+
+/* ===== Responsive Adjustments ===== */
+@media (max-width: 991.98px) {
+  .navbar-custom {
+    padding: 0.6rem 0;
+  }
+  /* Collapsed menu background */
+  .navbar-custom .navbar-collapse {
+    background: rgba(15, 23, 42, 0.98);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-radius: 0 0 12px 12px;
+    padding: 1rem;
+    margin-top: 0.5rem;
+    box-shadow: var(--shadow-scrolled);
+  }
+  .navbar-custom .nav-link {
+    margin: 0.5rem 0;
+    padding: 0.5rem 1rem;
+    text-align: center;
+  }
+  .navbar-custom .nav-link::after {
+    display: none; /* simpler look on mobile */
+  }
+}
+
+/* For very small devices */
+@media (max-width: 576px) {
+  .brand {
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+  }
+}

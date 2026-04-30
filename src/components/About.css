@@ -1,0 +1,226 @@
+/* About.css – Fully Centered & Visible Heading */
+
+:root {
+  --about-bg-start: #0f172a;
+  --about-bg-end: #1e293b;
+  --about-accent: #38bdf8;
+  --about-text: #e2e8f0;
+  --about-heading: #f8fafc;
+  --about-card-bg: rgba(255, 255, 255, 0.05);
+  --about-border: rgba(255, 255, 255, 0.1);
+  --about-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  --about-glow: 0 0 20px rgba(56, 189, 248, 0.25);
+}
+
+.about-section {
+  position: relative;
+  background: linear-gradient(135deg, var(--about-bg-start), var(--about-bg-end));
+  color: var(--about-text);
+  overflow: hidden;
+}
+
+.about-section::before {
+  content: '';
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(56, 189, 248, 0.1) 0%, transparent 70%);
+  top: -100px;
+  right: -100px;
+  z-index: 0;
+}
+.about-section::after {
+  content: '';
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.08) 0%, transparent 70%);
+  bottom: -80px;
+  left: -80px;
+  z-index: 0;
+}
+
+.about-section .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* ---- Fixed Heading ---- */
+.section-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: var(--about-heading);
+  position: relative;
+  display: block;           /* block instead of inline-block */
+  text-align: center;       /* text centered */
+  width: 100%;
+  margin-bottom: 3rem;
+  letter-spacing: 1px;
+  text-shadow: 0 0 20px rgba(56, 189, 248, 0.25);   /* extra glow */
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: var(--about-accent);
+  border-radius: 2px;
+}
+
+/* Rest of your CSS remains unchanged */
+.profile-image-wrapper {
+  position: relative;
+  display: inline-block;
+  border-radius: 50%;
+  padding: 6px;
+  background: linear-gradient(135deg, var(--about-accent), #6366f1);
+  box-shadow: var(--about-glow);
+}
+
+.profile-image {
+  border-radius: 50%;
+  object-fit: cover;
+  width: 220px;
+  height: 220px;
+  border: 4px solid var(--about-bg-end);
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+.profile-image:hover {
+  transform: scale(1.05);
+  filter: grayscale(20%);
+}
+
+.contact-info p {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+}
+.contact-icon {
+  color: var(--about-accent);
+  font-size: 1.2rem;
+}
+
+.download-btn {
+  background: var(--about-accent);
+  border: none;
+  padding: 0.75rem 2rem;
+  font-weight: 600;
+  border-radius: 50px;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  box-shadow: 0 4px 15px rgba(56, 189, 248, 0.3);
+  transition: all 0.3s ease;
+}
+.download-btn:hover {
+  background: #0ea5e9;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(56, 189, 248, 0.5);
+  color: #fff;
+}
+
+.about-text {
+  background: var(--about-card-bg);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--about-border);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: var(--about-shadow);
+}
+
+.greeting {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--about-heading);
+  margin-bottom: 1.2rem;
+}
+
+.lead {
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: var(--about-accent);
+  margin-bottom: 1.2rem;
+}
+
+.about-text p {
+  line-height: 1.7;
+  opacity: 0.9;
+}
+
+.highlights {
+  margin-top: 2rem;
+}
+
+.highlight-item {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 1.2rem 0.5rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+.highlight-item:hover {
+  background: rgba(56, 189, 248, 0.1);
+  border-color: var(--about-accent);
+  transform: translateY(-5px);
+}
+
+.highlight-number {
+  display: block;
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--about-accent);
+  margin-bottom: 0.3rem;
+  line-height: 1;
+}
+
+.highlight-label {
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  opacity: 0.8;
+}
+
+@media (max-width: 992px) {
+  .about-text {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2.2rem;
+  }
+  .greeting {
+    font-size: 1.6rem;
+  }
+  .profile-image {
+    width: 180px;
+    height: 180px;
+  }
+  .highlight-number {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .about-text {
+    padding: 1.2rem;
+    margin-top: 1rem;
+  }
+  .highlight-item {
+    margin-bottom: 1rem;
+  }
+  .download-btn {
+    padding: 0.6rem 1.5rem;
+    font-size: 0.8rem;
+  }
+}
