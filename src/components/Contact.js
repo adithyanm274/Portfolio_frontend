@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Container, Form, Button, Row, Col, Alert } from 'react-bootstrap';
 import { FaEnvelope } from 'react-icons/fa';
 import './Contact.css';
-import API_BASE from "../api";          // dynamic base URL
+import API_BASE from "../api";               // ← dynamic base URL from src/api.js
 
 const Contact = () => {
   const [showAlert, setShowAlert] = useState(false);
@@ -21,7 +21,7 @@ const Contact = () => {
     };
 
     try {
-      // ✅ Correct full path: /api/contact/send/
+      // ✅ Correct full endpoint – matches your Django URLs
       const response = await fetch(`${API_BASE}/api/contact/send/`, {
         method: 'POST',
         headers: {
