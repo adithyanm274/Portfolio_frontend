@@ -44,7 +44,7 @@ const Hero = () => {
           </a>
           {/* Gmail compose link */}
           <a 
-            href="https://mail.google.com/mail/?view=cm&fs=1&to=adithyan.m.2742001@gmail.com" 
+            href="mailto:adithyan.m.2742001@gmail.com" 
             target="_blank" 
             rel="noopener noreferrer" 
             className="social-icon"
