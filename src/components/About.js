@@ -48,13 +48,13 @@ const About = () => {
                 <Row>
                   <Col xs={6}>
                     <div className="highlight-item">
-                      <span className="highlight-number">3+</span>
+                      <span className="highlight-number">4+</span>
                       <span className="highlight-label">Projects</span>
                     </div>
                   </Col>
                   <Col xs={6}>
                     <div className="highlight-item">
-                      <span className="highlight-number">1.5+</span>
+                      <span className="highlight-number">3+</span>
                       <span className="highlight-label">Years Experience</span>
                     </div>
                   </Col>
