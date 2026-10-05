@@ -25,7 +25,7 @@ const About = () => {
             </div>
             <Button 
               variant="primary" 
-              href="/ADITHYAN-M-CV(6).pdf" 
+              href="/ADITHYAN-M-CV(6).pdf/" 
               download 
               className="mt-3 download-btn"
             >
