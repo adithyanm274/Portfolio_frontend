@@ -54,8 +54,8 @@ const About = () => {
                   </Col>
                   <Col xs={6}>
                     <div className="highlight-item">
-                      <span className="highlight-number">3+</span>
-                      <span className="highlight-label">Years Experience</span>
+                      <span className="highlight-number"> 3+ </span>
+                      <span className="highlight-label"> Years Experience </span>
                     </div>
                   </Col>
                 </Row>
