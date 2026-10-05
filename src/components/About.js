@@ -25,7 +25,7 @@ const About = () => {
             </div>
             <Button 
               variant="primary" 
-              href="/ADITHYAN-M-CV(5).pdf" 
+              href="/ADITHYAN-M-CV(6).pdf" 
               download 
               className="mt-3 download-btn"
             >
@@ -42,14 +42,14 @@ const About = () => {
                 I specialize in Django, Django REST Framework, and database optimization. I love solving complex problems and creating efficient, scalable solutions. Currently enhancing my skills with a Master's in Computer Applications (ongoing) from IGNOU.
               </p>
               <p>
-                I've successfully delivered projects like an AI Fitness Assistant, an Warehouse Management System, and an E-Commerce platform. I'm passionate about clean code, Agile practices, and collaborating with cross-functional teams.
+                I've successfully delivered projects like an AI Fitness Assistant, AI Cybersecurity Assistant, an Warehouse Management System, and an E-Commerce platform. I'm passionate about clean code, Agile practices, and collaborating with cross-functional teams.
               </p>
               <div className="highlights mt-4">
                 <Row>
                   <Col xs={6}>
                     <div className="highlight-item">
-                      <span className="highlight-number">4+</span>
-                      <span className="highlight-label">Projects</span>
+                      <span className="highlight-number"> 4+ </span>
+                      <span className="highlight-label"> Projects </span>
                     </div>
                   </Col>
                   <Col xs={6}>
