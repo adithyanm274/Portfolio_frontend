@@ -30,6 +30,15 @@ const projects = [
     github: 'https://github.com/adithyanm274/warehouse',
     live: 'https://warehouse-01hp.onrender.com/',
   },
+  {
+    id: 4,
+    title: 'AI-Cybersecurity-Assistant',
+    description:  "AI CyberShield is a proactive cybersecurity solution designed to combat the rising tide of email-based threats. Unlike traditional spam filters that rely on static blocklists, this system utilizes Natural Language Processing (NLP) and Machine Learning (ML) to analyze email context, intent, and structural anomalies. The system specifically addresses the challenge of Valid Gmail Accounts being compromised or spoofed to distribute malware, providing an extra layer of heuristic analysis before the user interacts with the message.",
+    tech: ['Django', 'Bootstrap', 'PostgreSQL', "DataTables"],
+    image: '/images/AI.jpg',
+    github: 'https://github.com/adithyanm274/AI_Cybershield',
+    live: 'https://ai-cybershield-dbpc.onrender.com/',
+  },
   // Add more projects as needed
 ];
 

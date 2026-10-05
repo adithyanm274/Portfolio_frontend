@@ -36,7 +36,7 @@ const About = () => {
             <div className="about-text">
               <h3 className="greeting">Hi, I'm Adithyan M 👋</h3>
               <p className="lead">
-                Python Full-Stack / Django Developer with 1.5+ years of experience building scalable web applications and RESTful APIs.
+                Python Full-Stack / Django Developer with 3+ years of experience building scalable web applications and RESTful APIs.
               </p>
               <p>
                 I specialize in Django, Django REST Framework, and database optimization. I love solving complex problems and creating efficient, scalable solutions. Currently enhancing my skills with a Master's in Computer Applications (ongoing) from IGNOU.
